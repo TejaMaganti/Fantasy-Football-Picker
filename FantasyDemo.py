@@ -25,10 +25,18 @@ class fantasyqb:
 f = open("players.txt", "r")
 for line in open("players.txt"):
     first, last, pos = line.strip().split(',')
-    print(first[:1] + "." +last)
+    name = first[:1] + "." +last
+    print(name)
+    if pos == "QB":
+      QB = [name]
+#    elif pos == "RB":
+#       RB = [name]
+#    print(QB)
+    #print(RB)
 
-game = nflgame.one(2017, 14, "LA", "PHI")
-wentz = game.players.name("C.Wentz")
+game = nflgame.games(2017, 14)
+qb = nflgame.combine(game)
+wentz = qb.name(QB[0])
 qb = fantasyqb(wentz, wentz.passing_yds, wentz.passing_ints, wentz.passing_tds, wentz.passing_twoptm, wentz.rushing_yds, wentz.rushing_tds)
 qb.func()
 
