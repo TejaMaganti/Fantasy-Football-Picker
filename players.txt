@@ -1,3 +1,4 @@
 Carson,Wentz,QB
 Leveon,Bell,RB
-Jared,Goff,QB
+Deandre,Hopkins,WR
+Jake,Elliot,K
